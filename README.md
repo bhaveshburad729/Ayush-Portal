@@ -83,6 +83,8 @@ PORT=5000
 ```bash
 cd ../client
 npm install
+npm install --legacy-peer-deps
+
 ```
 Create a `.env` file in the client folder and add:
 ```
