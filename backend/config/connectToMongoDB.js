@@ -1,27 +1,16 @@
 const mongoose = require("mongoose");
-const process = require("process");
+const MONGO_URL = "mongodb://127.0.0.1:27017/AyushPortal";
 
 const connectToMongoDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI);
-    console.log("MongoDB connected!!");
+    await mongoose.connect(MONGO_URL, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log("Connected to MongoDB");
   } catch (error) {
-    console.log("Failed to connect to MongoDB", error);
+    console.error("Failed to connect to MongoDB", error);
   }
 };
 
 module.exports = connectToMongoDB;
-
-// const mongoose = require("mongoose");
-// const process = require("process");
-
-// const connectToMongoDB = async () => {
-//   try {
-//     await mongoose.connect(process.env.MONGO_URI);
-//     console.log("MongoDB connected!!");
-//   } catch (error) {
-//     console.log("Failed to connect to MongoDB", error);
-//   }
-// };
-
-// module.exports = connectToMongoDB;

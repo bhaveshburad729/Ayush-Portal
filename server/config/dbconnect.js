@@ -8,7 +8,7 @@ function connect() {
     autoIndex: process.env.NODE_ENV !== "prod"
   };
 
-  let connectionString = "mongodb+srv://kaustubh69:khp2003@cluster0.spzps.mongodb.net/Buymekoffee?retryWrites=true&w=majority&appName=Cluster0";
+  let connectionString = "mongodb+srv://lucky577:Lok22rk+@cluster0.8effy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
   if (process.env.NODE_ENV === "prod") {
     connectionString = process.env.MONGO_URI_PROD;
   }
