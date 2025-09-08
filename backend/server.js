@@ -3,8 +3,8 @@ const dotenv = require("dotenv");
 const path = require("path");
 const cors = require("cors");
 
-const { connectToMongoDB } = require("./config");
-const { userRoutes, chatRoutes, messageRoutes,aiRoutes,imageRoutes} = require("./routes");
+const connectToMongoDB = require("./config/connectToMongoDB");
+const { userRoutes, chatRoutes, messageRoutes, aiRoutes, imageRoutes } = require("./routes");
 const { notFound, errorHandler } = require("./middleware");
 
 const app = express(); // Use express js in our app
