@@ -75,11 +75,31 @@ npm install
 ```
 Create a `.env` file in the backend folder and add:
 ```
-MONGODB_URI=your_mongodb_connection_string
+OPENAI_API_KEY= "Your Open API Key"
 PORT=5000
+JWT_SECRET=Your JWT secret key
+JWT_EXPIRE=7d
 ```
 
-### Step 3: Setup Frontend
+### Step 3: setup Server
+```bash
+cd Server
+npm install
+```
+
+Create a `.env` file in the backend folder and add:
+```
+MONGODB_URI="Your MongoDB cluster URL"
+```
+In config at dbconnect.js set 
+```
+connectionString = "Your mongoDB Cluster"
+```
+```
+npm start
+```
+
+### Step 4: Setup Frontend
 ```bash
 cd ../client
 npm install
@@ -88,25 +108,11 @@ npm install --legacy-peer-deps
 ```
 Create a `.env` file in the client folder and add:
 ```
+PUBLIC_URL=http://localhost:3000
 REACT_APP_BACKEND_URL=http://localhost:5000
 ```
-
-### Step 4: Run the Project
-1. Start Backend:
-```bash
-cd backend
+```
 npm start
-```
-
-2. Start Frontend (open new terminal):
-```bash
-cd client
-npm start
-```
-
-3. Open your browser and go to:
-```
-http://localhost:3000
 ```
 
 ### Common Issues and Solutions:
@@ -140,4 +146,4 @@ http://localhost:3000
 
 Team Code_Slayers:
 - [Bhavesh Burad](https://github.com/bhaveshburad729)
-[Add other team members' names and GitHub links here]
+- [Lokesh Patil](https://github.com/lokesh-patil57)
