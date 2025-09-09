@@ -83,7 +83,7 @@ JWT_EXPIRE=7d
 
 ### Step 3: setup Server
 ```bash
-cd Server
+cd server
 npm install
 ```
 
@@ -101,7 +101,7 @@ npm start
 
 ### Step 4: Setup Frontend
 ```bash
-cd ../client
+cd client
 npm install
 npm install --legacy-peer-deps
 
